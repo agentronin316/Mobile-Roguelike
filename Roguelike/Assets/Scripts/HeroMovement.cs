@@ -4,7 +4,7 @@ using System.Collections;
 public class HeroMovement : MonoBehaviour
 {
 
-    public Collider2D orb;
+    GameObject orb;
     float orbSpeed = 20f;
 
     public float moveSpeed = 2f;
@@ -16,35 +16,53 @@ public class HeroMovement : MonoBehaviour
     {
         Left = Right = Up = Down = false;
         animator = GetComponent<Animator>();
+        orb = Resources.Load("Orb") as GameObject;
 	}
 
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        bool spawnedOrb = false;
+        for (int i = 0; i < Input.touchCount && !spawnedOrb; i++)
         {
-            Rigidbody2D orbInstance;
-            orbInstance = Instantiate(orb, transform.position, Quaternion.identity) as Rigidbody2D;
-
-            if (Right)
+            if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
-                orbInstance.velocity = new Vector2(orbSpeed, 0f);
+                SpawnOrb();
+                spawnedOrb = true;
             }
-            if (Left)
-            {
-                orbInstance.velocity = new Vector2(-orbSpeed, 0f);
-            }
-            if (Up)
-            {
-                orbInstance.velocity = new Vector2(0f, orbSpeed);
-            }
-            if (Down)
-            {
-                orbInstance.velocity = new Vector2(0f, -orbSpeed);
-            }
-
         }
+
+#if UNITY_EDITOR
+        if (Input.GetButtonDown("Fire1"))
+        {
+            SpawnOrb();
+        }
+#endif
     }
 	
+    void SpawnOrb()
+    {
+        Rigidbody2D orbInstance;
+        orbInstance = (Instantiate(orb, transform.position, Quaternion.identity) as GameObject).GetComponent<Rigidbody2D>();
+
+        if (Right)
+        {
+            orbInstance.velocity = new Vector2(orbSpeed, 0f);
+        }
+        else if (Left)
+        {
+            orbInstance.velocity = new Vector2(-orbSpeed, 0f);
+        }
+        else if (Up)
+        {
+            orbInstance.velocity = new Vector2(0f, orbSpeed);
+        }
+        else
+        {
+            orbInstance.velocity = new Vector2(0f, -orbSpeed);
+        }
+        
+    }
+
 	void FixedUpdate ()
     {
         MoveCharacter();
@@ -111,7 +129,16 @@ public class HeroMovement : MonoBehaviour
         {
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
+    }
 
-
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("I hit something.... probably...");
+        if(other.gameObject.name == "Dwarf(clone)")
+        {
+            Debug.Log("It was an enemy... I are dead");
+            Time.timeScale = 0f;
+            Destroy(gameObject);
+        }
     }
 }
