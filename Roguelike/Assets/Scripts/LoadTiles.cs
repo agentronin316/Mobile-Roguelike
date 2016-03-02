@@ -4,20 +4,29 @@ using System.Xml;
 
 public class LoadTiles : MonoBehaviour {
 
-    public TextAsset mapInformation; //holds the .xml file
+    public TextAsset[] mapInformation; //holds the .xml file
 
     public GameObject tempCube; //a temporary tile
 
+    GameObject tileParent;
+
     Sprite[] sprites;
 
+    void Start()
+    {
+        tileParent = new GameObject();
+        LoadMap(1);
+    }
+
 	// Use this for initialization
-	void Start ()
+	public void LoadMap (int index)
     {
         sprites = Resources.LoadAll<Sprite>("roguelikeSheet_transparent");
         Debug.Log(sprites.Length);
 
         XmlDocument xmlDoc = new XmlDocument();
-        xmlDoc.LoadXml(mapInformation.text);
+        xmlDoc.LoadXml(mapInformation[index - 1].text);
+        
 
         Camera.main.transform.position = new Vector3(9.9f, -9.9f, 10f);
         Camera.main.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
@@ -63,7 +72,8 @@ public class LoadTiles : MonoBehaviour {
         XmlNode tempNode = layerInfo.SelectSingleNode("data");
 
         int mapLocVert, mapLocHoriz;
-        mapLocHoriz = mapLocVert = 0;
+        mapLocHoriz = 0;
+        mapLocVert = 0;
         
         foreach (XmlNode tile in tempNode.SelectNodes("tile"))
         {
@@ -87,7 +97,7 @@ public class LoadTiles : MonoBehaviour {
             {
                 //Time to go "Ka-chunk!"
                 mapLocHoriz = 0;
-                mapLocVert++;
+                mapLocVert--;
             }
 
         }

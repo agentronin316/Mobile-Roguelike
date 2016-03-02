@@ -183,7 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3f1316b6e6ee7478708e430e352057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapInformation: {fileID: 4900000, guid: d6b1719456733a5469844ce5fd3492fd, type: 3}
+  mapInformation:
+  - {fileID: 0}
   tempCube: {fileID: 178412, guid: d0dc1f24922186a4bb839b7f335874ca, type: 2}
 --- !u!1 &1206553822
 GameObject:
