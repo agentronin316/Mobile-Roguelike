@@ -21,11 +21,15 @@ public class LoadTiles : MonoBehaviour {
 	// Use this for initialization
 	public void LoadMap (int index)
     {
-        sprites = Resources.LoadAll<Sprite>("roguelikeSheet_transparent");
-        Debug.Log(sprites.Length);
 
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(mapInformation[index - 1].text);
+
+        XmlNodeList tempNodes = xmlDoc.GetElementsByTagName("tileset");
+
+        //Debug.Log(tempNodes[0].Attributes.GetNamedItem("name").Value);
+        sprites = Resources.LoadAll<Sprite>(tempNodes[0].Attributes.GetNamedItem("name").Value);
+        Debug.Log(sprites.Length);
         
 
         Camera.main.transform.position = new Vector3(9.9f, -9.9f, 10f);

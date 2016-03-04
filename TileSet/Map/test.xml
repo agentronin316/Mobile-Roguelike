@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
- <tileset firstgid="1" name="roguelikeSheet_transparentFIXED" tilewidth="16" tileheight="16" spacing="1" margin="1">
-  <image source="Mobile-Roguelike/TileSet/Spritesheet/roguelikeSheet_transparent.png" width="968" height="526"/>
+<map version="1.0" orientation="orthogonal" width="30" height="10" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="roguelikeSheet_transparent" tilewidth="16" tileheight="16" spacing="1" margin="1">
+  <image source="../Spritesheet/roguelikeSheet_transparent.png" width="968" height="526"/>
  </tileset>
  <layer name="Background" width="30" height="10">
   <data>
@@ -307,7 +307,7 @@
    <tile gid="62"/>
   </data>
  </layer>
- <layer name="Obstacles" width="30" height="10">
+ <layer name="Obstacles" width="30" height="10" visible="0">
   <data>
    <tile gid="57"/>
    <tile gid="116"/>
@@ -611,7 +611,7 @@
    <tile gid="114"/>
   </data>
  </layer>
- <layer name="Interactive" width="30" height="10">
+ <layer name="Interactive" width="30" height="10" visible="0">
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -915,7 +915,7 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="Foreground" width="30" height="10">
+ <layer name="Foreground" width="30" height="10" visible="0">
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
