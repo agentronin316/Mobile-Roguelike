@@ -2,8 +2,88 @@
 <map version="1.0" orientation="orthogonal" width="30" height="10" tilewidth="16" tileheight="16">
  <tileset firstgid="1" name="roguelikeSheet_transparent" tilewidth="16" tileheight="16" spacing="1" margin="1">
   <image source="../Spritesheet/roguelikeSheet_transparent.png" width="968" height="526"/>
+  <tile id="1021">
+   <properties>
+    <property name="stairsUp" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1022">
+   <properties>
+    <property name="stairsUp" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1023">
+   <properties>
+    <property name="stairsDown" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1024">
+   <properties>
+    <property name="stairsDown" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1028">
+   <properties>
+    <property name="stairsUp" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1029">
+   <properties>
+    <property name="stairsUp" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1030">
+   <properties>
+    <property name="stairsDown" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1031">
+   <properties>
+    <property name="stairsDown" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1035">
+   <properties>
+    <property name="stairsUp" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1036">
+   <properties>
+    <property name="stairsUp" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1037">
+   <properties>
+    <property name="stairsDown" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1038">
+   <properties>
+    <property name="stairsDown" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1042">
+   <properties>
+    <property name="stairsUp" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1043">
+   <properties>
+    <property name="stairsUp" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1044">
+   <properties>
+    <property name="stairsDown" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1045">
+   <properties>
+    <property name="stairsDown" value="1"/>
+   </properties>
+  </tile>
  </tileset>
- <layer name="Background" width="30" height="10">
+ <layer name="Background" width="30" height="10" visible="0">
   <data>
    <tile gid="6"/>
    <tile gid="6"/>
@@ -307,7 +387,7 @@
    <tile gid="62"/>
   </data>
  </layer>
- <layer name="Obstacles" width="30" height="10">
+ <layer name="Obstacles" width="30" height="10" visible="0">
   <data>
    <tile gid="57"/>
    <tile gid="116"/>
@@ -915,7 +995,7 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="Foreground" width="30" height="10">
+ <layer name="Foreground" width="30" height="10" visible="0">
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
