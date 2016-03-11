@@ -5,7 +5,8 @@ using System.Xml;
 public enum InteractiveProperties
 {
     STAIRS_UP,
-    STAIRS_DOWN
+    STAIRS_DOWN,
+    SPAWNER
 }
 
 public class LoadTiles : MonoBehaviour {
@@ -56,10 +57,13 @@ public class LoadTiles : MonoBehaviour {
                     {
                         properties.Add(InteractiveProperties.STAIRS_DOWN);
                     }
-                    tileIDs.Add(int.Parse(node.Attributes.GetNamedItem("id").Value));
+                    else if(propertyNode.Attributes.GetNamedItem("name").Value.ToUpper() == "SPAWNER")
+                    {
+                        properties.Add(InteractiveProperties.SPAWNER);
+                    }
+                    tileIDs.Add(int.Parse(node.Attributes.GetNamedItem("id").Value) + 1);
                     propertyNode = propertyNode.NextSibling;
                 }
-
             }
         }
 
@@ -130,7 +134,26 @@ public class LoadTiles : MonoBehaviour {
                     case "Interactive": //Set interactive layer tiles to have a trigger collider
                         tempSprite.AddComponent<BoxCollider2D>();
                         tempSprite.GetComponent<BoxCollider2D>().isTrigger = true;
-                        //Insert stuff for parsing properties to an enum
+                        //Insert enum check for properties
+                        if(tileIDs.Contains(spriteValue))
+                        {
+                            tempSprite.AddComponent<InteractionDataScript>();
+                            InteractionDataScript interactions = tempSprite.GetComponent<InteractionDataScript>();
+                            List<int> IDList = tileIDs.FindAll(delegate (int i) { return i == spriteValue; });
+                            int index = tileIDs.FindIndex(delegate (int i) { return i == spriteValue; });
+                            foreach (int i in IDList)
+                            {
+                                Debug.Log("ID: " + i);
+                                interactions.properties.Add(properties[index]);
+                                index++;
+                            }
+                            string[] tempStrings = new string[interactions.properties.Count];
+                            for (int i = 0; i < tempStrings.Length; i++)
+                            {
+                                tempStrings[i] = interactions.properties[i].ToString();
+                            }
+                            Debug.Log(string.Join(",", tempStrings ));
+                        }
                         break;
                 }
             }
