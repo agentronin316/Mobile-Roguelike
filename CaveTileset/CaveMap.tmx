@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="10" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="roguelikeDungeon_transparent" tilewidth="16" tileheight="16" spacing="1">
+  <image source="Spritesheet/roguelikeDungeon_transparent.png" width="492" height="305"/>
+ </tileset>
+ <layer name="Background" width="30" height="10">
+  <data encoding="base64" compression="zlib">
+   eJx1lFEOxCAIRNf7nxLQe2w3keT1rX4Qio4DjpPm+HzqifVEPjFR147cde/NXcfe65zChLgD5wrY/p7AliIOPU99U/gEN/utC39d+FiH8NSoxnm2jkRuDupZwt30ce03Ih85eX+vxXjPcNMgkE/vT+0DHAmuhcz75HjrzLNLGtuzMd6zTvWkzmv8ax3CcFbrQq8s4XrNPqXm9nmqngrPay+GuMlLnb1n7ekf+pTffJvG8a3Yy55KcfJe/ndYn1/+AmPoCzQ=
+  </data>
+ </layer>
+ <layer name="Obstacles" width="30" height="10">
+  <data encoding="base64" compression="zlib">
+   eJzrZGBg6EDCwlDcgUR3YBETxqMPmY+uDoRbgdiQgf5Af9TeUXtH7aWKvf4MuMsKbHxcZQe2cgOXem8gBgA5Dhhb
+  </data>
+ </layer>
+ <layer name="Interactive" width="30" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhAQAEsAAB
+  </data>
+ </layer>
+ <layer name="Foreground" width="30" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhAQAEsAAB
+  </data>
+ </layer>
+</map>
