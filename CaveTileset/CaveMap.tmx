@@ -10,17 +10,17 @@
  </layer>
  <layer name="Obstacles" width="30" height="10">
   <data encoding="base64" compression="zlib">
-   eJzrZGBg6EDCwlDcgUR3YBETxqMPmY+uDoRbgdiQgf5Af9TeUXtH7aWKvf4MuMsKbHxcZQe2cgOXem8gBgA5Dhhb
+   eJydVNsJwzAMVPyYIHu0NGvko1MVnK1rgw4OIbl1Dg5b1uOcWOgSkUbclY3WZs6Ozsckj+3dxA1+Ol+yju1GDuN5U7fQvuo9wKxkO2lc/aHL+aJ5yfiFfP9ipluDWkW5GX92YiMgz9MtTlxUO098HlDb6iZnH/1HvOEKIl3U8bSsRvSd6B+8Cd6F8yNdYNYzK/1kMXTfEs8Kz7YzBGd2lkQzZ6xn5xeN1hjo
   </data>
  </layer>
  <layer name="Interactive" width="30" height="10">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIKhAQAEsAAB
+   eJxjYBgFo2BoAtWBdsAooDsAAEz0ACY=
   </data>
  </layer>
  <layer name="Foreground" width="30" height="10">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIKhAQAEsAAB
+   eJxjYBgFo4B8oArEHANg70DYOQoGHgAAggAANg==
   </data>
  </layer>
 </map>
