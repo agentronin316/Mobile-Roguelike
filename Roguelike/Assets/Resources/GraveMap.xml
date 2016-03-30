@@ -25,22 +25,22 @@
  </tileset>
  <layer name="Background" width="30" height="10">
   <data encoding="base64" compression="zlib">
-   eJx1lFEOxCAIROsZ9v6HA/Qe22Y1eb6tHwShwwgjabbrqtvGbXnb5/rZmPma+SfuM+4zjvktUEdMiDtQV+Bb5w5syeLlznVOcKXwCW7eNw78deBjHMJTo2rvvS1L+MVBPUu4kz6O/UbkIyfndy7a3sNJg4DP9j8rtQ9wJLgGPOfJtuvM2iGNWct+SnzMjba/HbUOYdirdeGuDOFWzntKzb3nqbjL3K93McRNXursb9ae+8M95Zlvs3B8K97lnUpxci7/O6zP47+urwfx
+   eJx101sSwyAIBdC4YET31IW2nYaZU2o/GCPifSDJcV3zjvWKx/WJysWd3+wne3Nx5wtjc7Y4t1acd+R95r3ke7NucJO62i8wZ6stjISzajqnnjcY9b3Yy9nx5Znj20s27JPeyWr/Ak5ru76AszjUqn/1rfGrIcDvnnp/PMvG7xp/7p+891mUJ+Cq+/3dnaeEr2M5V+pQS/d6eqMFpnr8v+yrfXLdxKlHesvxPX/2wHcrLL+j5fV24pdDPX0mV8N1vvTYe1x3niAshAU=
   </data>
  </layer>
  <layer name="Obstacles" width="30" height="10">
   <data encoding="base64" compression="zlib">
-   eJydVNsNgzAQO5IRMgEM0Iqu0Y9OhUS3biKw5Fp3EcGSlcc9nMBdvma2E4E2L7RfaHxVPjpx8CuSA9wqVxvHdCOG8bypu8gZmPkkrxPt9XQ53s64JHYj21Ugn6eL8ylmO+45iT07vhEQF+mqX5Q7d2wjusmZR9+R/9dVoC5UF3k8LdWI7ol6Ss4ciHSBXs2M1JOi6X7sv7+1z72+93z1LYnenDa+K38rVhj4
+   eJytVAEKgCAMnJ9I6i/62h4SvSOop6Tk8JpOlBKGm93t1rIthmilx2zwecV4NqVZ2K3JPC2HrfCmYHuG0QmckeUG8Ru1dX2yeO5SfvQ13qiuhz3mauXz4DOO63Swc52Il7rI79GSdbXqxP580eWY38lT2a+/dHvvT60vWIfUrfG+6Gp5NF3tO/XeW00PdS96//s4H3gWYCxxOBtwPjBGzp/4/AhnN6dHN7I=
   </data>
  </layer>
  <layer name="Interactive" width="30" height="10">
   <data encoding="base64" compression="zlib">
-   eJxjYEAFvUDcx0A6IFffKBjaQBWIOQbAXg6o3aNgZAEAwkICkQ==
+   eJxjYEAFvUDcx0AZoIYZo2AUUBtwALHqANirCrV7FFAOAHiGApE=
   </data>
  </layer>
  <layer name="Foreground" width="30" height="10">
   <data encoding="base64" compression="zlib">
-   eJxjYBg6gGWgHUAHwMIwMvxJTTAaXiMHAAA1YAAR
+   eJxjYBgFo2AUjIKhAQAEsAAB
   </data>
  </layer>
 </map>
