@@ -1,0 +1,21 @@
+Main: UP = Directions; LEFT = Settings; RIGHT = Credits; DOWN = NOTHING!!!
+Settings: UP = Credits; LEFT = NOTHING!!!; RIGHT = Main; DOWN = Directions
+Credits: UP = NOTHING!!!; LEFT = Main; RIGHT = Directions; DOWN = Settings
+Directions: UP = Settings; LEFT = Credits; RIGHT = NOTHING!!!; DOWN = Main
+
+Right:
+	Main to Credits
+	Settings to Main
+	Credits to Directions
+Left:
+	Main to Settings
+	Credits to Main
+	Directions to Credits
+Up:
+	Main to Directions
+	Settings to Credits
+	Directions to Settings
+Down:
+	Settings to Directions
+	Credits to Settings
+	Directions to Main
