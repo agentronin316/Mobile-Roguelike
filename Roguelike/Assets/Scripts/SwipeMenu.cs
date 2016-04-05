@@ -16,6 +16,11 @@ public class SwipeMenu : MonoBehaviour {
 
     MenuState curMenu = MenuState.MAIN;
 
+    public GameObject mainMenu;
+    public GameObject settingsMenu;
+    public GameObject creditsMenu;
+    public GameObject DirectionsMenu;
+
 	// Update is called once per frame
 	void Update ()
     {
