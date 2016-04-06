@@ -8,6 +8,7 @@ public static class Controller{
     public static int highScore = 0;
     public static float volume = .5f;
     public static int difficulty = 1;
+    public static int highestLevel = 0;
     
     public static void LoadData()
     {
@@ -16,6 +17,7 @@ public static class Controller{
         swipeShoot = PlayerPrefs.GetInt("Swipe Shoot") > 0;
         highScore = PlayerPrefs.GetInt("High Score");
         difficulty = PlayerPrefs.GetInt("Difficulty");
+        highestLevel = PlayerPrefs.GetInt("Highest Level");
     }
 	
     public static void StoreData()
@@ -25,6 +27,7 @@ public static class Controller{
         PlayerPrefs.SetInt("Swipe Shoot", swipeShoot ? 1 : 0);
         PlayerPrefs.SetInt("High Score", highScore);
         PlayerPrefs.SetInt("Difficulty", difficulty);
+        PlayerPrefs.SetInt("Highest Level", highestLevel);
     }
 
 }

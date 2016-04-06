@@ -27,6 +27,23 @@ public class SwipeMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            MenuTransitionLeft();
+        }
+        else if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            MenuTransitionRight();
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            MenuTransitionUp();
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            MenuTransitionDown();
+        }
+
 	    foreach(Touch touch in Input.touches)
         {
             if(touch.phase == TouchPhase.Moved && touch.deltaPosition.magnitude >= swipeMinLength)
@@ -98,6 +115,7 @@ public class SwipeMenu : MonoBehaviour {
 
     void MenuTransitionLeft()
     {
+        newMenuPos = new Vector2(-(Screen.width / 2f), Screen.height / 2f);
         switch (curMenu)
         {
             case MenuState.MAIN:
@@ -132,6 +150,7 @@ public class SwipeMenu : MonoBehaviour {
 
     void MenuTransitionUp()
     {
+        newMenuPos = new Vector2(Screen.width / 2f, -(Screen.height / 2f));
         switch (curMenu)
         {
             case MenuState.MAIN:
@@ -166,6 +185,7 @@ public class SwipeMenu : MonoBehaviour {
 
     void MenuTransitionDown()
     {
+        newMenuPos = new Vector2(Screen.width / 2f, Screen.height * 3f / 2f);
         switch (curMenu)
         {
             case MenuState.DIRECTIONS:
