@@ -50,25 +50,29 @@ public class SwipeMenu : MonoBehaviour {
             {
                 if (touch.deltaPosition.x > touch.deltaPosition.y)
                 {
-                    //Down or Right
+                    //Swipe direction is Down or Right
                     if (touch.deltaPosition.x > -touch.deltaPosition.y)
                     {
+                        //Slide menu right
                         MenuTransitionRight();
                     }
                     else
                     {
+                        //Slide menu down
                         MenuTransitionDown();
                     }
                 }
                 else
                 {
-                    //Up or Left
+                    //Swipe direction is Up or Left
                     if (touch.deltaPosition.x > -touch.deltaPosition.y)
                     {
+                        //Slide menu up
                         MenuTransitionUp();
                     }
                     else
                     {
+                        //Slide menu left
                         MenuTransitionLeft();
                     }
                 }
@@ -78,7 +82,7 @@ public class SwipeMenu : MonoBehaviour {
 
     void MenuTransitionRight()
     {
-        newMenuPos = new Vector2(Screen.width * 3f / 2f, Screen.height / 2f);
+        newMenuPos = new Vector2(Screen.width * 1.5f, Screen.height / 2f);
         switch (curMenu)
         {
             case MenuState.MAIN:
@@ -150,7 +154,7 @@ public class SwipeMenu : MonoBehaviour {
 
     void MenuTransitionUp()
     {
-        newMenuPos = new Vector2(Screen.width / 2f, -(Screen.height / 2f));
+        newMenuPos = new Vector2(Screen.width / 2f, Screen.height * 1.5f);
         switch (curMenu)
         {
             case MenuState.MAIN:
@@ -185,7 +189,7 @@ public class SwipeMenu : MonoBehaviour {
 
     void MenuTransitionDown()
     {
-        newMenuPos = new Vector2(Screen.width / 2f, Screen.height * 3f / 2f);
+        newMenuPos = new Vector2(Screen.width / 2f, -(Screen.height / 2f));
         switch (curMenu)
         {
             case MenuState.DIRECTIONS:
