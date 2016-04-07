@@ -30,19 +30,19 @@ public class SwipeMenu : MonoBehaviour {
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            MenuTransitionLeft();
+            MenuTransitionRight();
         }
         else if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            MenuTransitionRight();
+            MenuTransitionLeft();
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            MenuTransitionUp();
+            MenuTransitionDown();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            MenuTransitionDown();
+            MenuTransitionUp();
         }
 
 	    foreach(Touch touch in Input.touches)
@@ -81,7 +81,7 @@ public class SwipeMenu : MonoBehaviour {
         }
 	}
 
-    void MenuTransitionRight()
+    void MenuTransitionLeft()
     {
         newMenuPos = new Vector2(Screen.width * 1.5f, Screen.height / 2f);
         switch (curMenu)
@@ -118,7 +118,7 @@ public class SwipeMenu : MonoBehaviour {
 
     
 
-    void MenuTransitionLeft()
+    void MenuTransitionRight()
     {
         newMenuPos = new Vector2(-(Screen.width / 2f), Screen.height / 2f);
         switch (curMenu)
@@ -153,7 +153,7 @@ public class SwipeMenu : MonoBehaviour {
         }
     }
 
-    void MenuTransitionUp()
+    void MenuTransitionDown()
     {
         newMenuPos = new Vector2(Screen.width / 2f, Screen.height * 1.5f);
         switch (curMenu)
@@ -188,7 +188,7 @@ public class SwipeMenu : MonoBehaviour {
         }
     }
 
-    void MenuTransitionDown()
+    void MenuTransitionUp()
     {
         newMenuPos = new Vector2(Screen.width / 2f, -(Screen.height / 2f));
         switch (curMenu)
