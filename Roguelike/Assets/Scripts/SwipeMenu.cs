@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 public enum MenuState
@@ -264,4 +265,12 @@ public class SwipeMenu : MonoBehaviour {
         outgoingMenu.SetActive(false);
         curMenu = nextMenu;
     }
+
+    public void _LoadLevel()
+    {
+        SceneManager.LoadScene("LoadMap");
+    }
+
+
+
 }

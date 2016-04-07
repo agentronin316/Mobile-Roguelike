@@ -670,7 +670,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 466262779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1375430908}
+        m_MethodName: _LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &466262779
@@ -1511,7 +1522,7 @@ MonoBehaviour:
 
     All Sounds created by Marshall R. Mason with bfxr at bfxr.net
 
-    Character sprites and Orb sprite by ........'
+    Wizard, Dwarf, and Orb sprites retrieved from public domain.'
 --- !u!222 &814025110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1964,7 +1975,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1161926357}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1375430908}
+        m_MethodName: _LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1161926357
